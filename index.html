@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO Metadata -->
+  <title>G Murali Krishnan | VAPT Engineer & Aspiring Red Teamer</title>
+  <meta name="description"
+    content="Portfolio of G Murali Krishnan, a VAPT Engineer and aspiring Red Teamer focused on web application security, penetration testing, vulnerability assessment and offensive security.">
+  <meta name="keywords"
+    content="G Murali Krishnan, VAPT Engineer, Red Team, Web Penetration Testing, Offensive Security, Cybersecurity, Ethical Hacking, CTF Winner, OWASP, TryHackMe">
+  <meta name="author" content="G Murali Krishnan">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="G Murali Krishnan | VAPT Engineer & Aspiring Red Teamer">
+  <meta property="og:description"
+    content="Personal offensive-security operations workstation of G Murali Krishnan. Specializing in Web Application Security, VAPT, and Red Team tradecraft.">
+  <meta property="og:site_name" content="GMK Offensive Security Lab">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+
+  <!-- Google Fonts: Space Grotesk, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;0,800;1,400&family=Space+Grotesk:wght@500;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Cyber Background System & Scanlines -->
+  <div class="cyber-bg-grid" aria-hidden="true"></div>
+  <div class="cyber-scanline" aria-hidden="true"></div>
+  <div class="cyber-glow-orb cyber-glow-orb-1" aria-hidden="true"></div>
+  <div class="cyber-glow-orb cyber-glow-orb-2" aria-hidden="true"></div>
+
+  <!-- Custom Cyber Cursor -->
+  <div class="custom-cursor-dot" aria-hidden="true"></div>
+  <div class="custom-cursor-ring" aria-hidden="true">
+    <span class="cursor-label"></span>
+  </div>
+
+  <!-- 01. Boot Sequence Overlay -->
+  <aside id="boot-sequence-overlay" aria-label="Terminal Boot Sequence" role="dialog" aria-modal="true">
+    <div class="boot-terminal-box">
+      <div class="boot-header">
+        <div class="boot-header-title">
+          <span class="status-dot"></span>
+          <span>SECURE OPERATING SYSTEM BOOTLOADER // GMK-VAPT</span>
+        </div>
+        <button type="button" class="boot-skip-btn" id="boot-skip-btn" aria-label="Skip boot sequence">
+          [ SKIP INTRO (ESC) ]
+        </button>
+      </div>
+      <div class="boot-body" id="boot-terminal-lines">
+        <!-- Lines injected via app.js -->
+      </div>
+    </div>
+  </aside>
+
+  <!-- 02. Technical Sticky Top Navigation -->
+  <header>
+    <nav class="cyber-nav" aria-label="Primary Navigation">
+      <div class="nav-container">
+        <a href="#hero" class="nav-brand" aria-label="G Murali Krishnan Portfolio Home">
+          <span class="brand-handle">GMK<span>_</span></span>
+          <div class="system-status-beacon">
+            <span class="status-dot"></span>
+            <span>SYSTEM ONLINE</span>
+          </div>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#recon" class="nav-link"><span class="nav-num">01</span>RECON</a></li>
+          <li><a href="#arsenal" class="nav-link"><span class="nav-num">02</span>ARSENAL</a></li>
+          <li><a href="#missions" class="nav-link"><span class="nav-num">03</span>PROJECTS</a></li>
+          <li><a href="#experience" class="nav-link"><span class="nav-num">04</span>EXPERIENCE</a></li>
+          <li><a href="#operations" class="nav-link"><span class="nav-num">05</span>ACHIEVEMENTS</a></li>
+          <li><a href="#terminal-lab" class="nav-link"><span class="nav-num">--</span>TERMINAL</a></li>
+          <li><a href="#contact" class="nav-link"><span class="nav-num">06</span>CONTACT</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="#contact" class="cyber-btn cyber-btn-green cyber-btn-sm desktop-only" data-cursor="HIRE ME">
+            [ HIRE ME ]
+          </a>
+          <button type="button" class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            [ MENU ]
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <aside class="mobile-menu-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="system-status-beacon" style="margin-bottom: 12px;">
+      <span class="status-dot"></span>
+      <span>VAPT WORKSTATION ONLINE</span>
+    </div>
+    <a href="#hero" class="nav-link"><span class="nav-num">--</span>HOME / HUD</a>
+    <a href="#recon" class="nav-link"><span class="nav-num">01</span>01 / RECON</a>
+    <a href="#arsenal" class="nav-link"><span class="nav-num">02</span>02 / ARSENAL</a>
+    <a href="#missions" class="nav-link"><span class="nav-num">03</span>03 / PROJECTS</a>
+    <a href="#experience" class="nav-link"><span class="nav-num">04</span>04 / EXPERIENCE</a>
+    <a href="#operations" class="nav-link"><span class="nav-num">05</span>05 / ACHIEVEMENTS</a>
+    <a href="#terminal-lab" class="nav-link"><span class="nav-num">--</span>TERMINAL LAB</a>
+    <a href="#contact" class="nav-link"><span class="nav-num">06</span>06 / CONTACT</a>
+    <div style="margin-top: 16px; display: flex; flex-direction: column; gap: 10px;">
+      <button type="button" class="cyber-btn cyber-btn-primary trigger-resume-modal">
+        [ VIEW RESUME PDF ]
+      </button>
+      <a href="G Murali Krishnan - 1ST23CY012.pdf" download="G_Murali_Krishnan_Resume.pdf"
+        class="cyber-btn cyber-btn-outline">
+        [ DOWNLOAD RESUME ]
+      </a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ==========================================================================
+         03. HERO SECTION & LIVE HUD
+         ========================================================================== -->
+    <section id="hero" aria-label="Hero Introduction">
+      <div class="section-container">
+        <div class="hero-grid">
+
+          <!-- Left Column: Identity & Creed -->
+          <div class="hero-identity-col">
+            <div class="hero-meta-badge">
+              <span class="status-dot"></span>
+              <span>VAPT WORKSTATION // V2.6.4</span>
+            </div>
+
+            <div class="hero-role-title">VAPT ENGINEER</div>
+            <h1 class="hero-name">G Murali<br>Krishnan</h1>
+
+            <div class="hero-creed-box">
+              <span class="creed-item creed-find">I FIND.</span>
+              <span class="creed-item creed-exploit">I EXPLOIT.</span>
+              <span class="creed-item creed-secure">I SECURE.</span>
+            </div>
+
+            <p class="hero-bio">
+              VAPT engineer focused on web application security, vulnerability assessment, exploitation, reconnaissance
+              and offensive security. Building toward a career in Red Team operations.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#missions" class="cyber-btn cyber-btn-primary" data-cursor="PROJECTS">
+                [ PROJECTS ]
+              </a>
+              <button type="button" class="cyber-btn cyber-btn-outline trigger-resume-modal" data-cursor="VIEW PDF">
+                [ VIEW RESUME ]
+              </button>
+              <a href="https://tryhackme.com/p/HunterHacker05?tab=yearly-activity" target="_blank"
+                rel="noopener noreferrer" class="cyber-btn cyber-btn-green" data-cursor-color="green">
+                [ TRYHACKME ]
+              </a>
+              <a href="#contact" class="cyber-btn cyber-btn-green" data-cursor-color="green">
+                [ HIRE ME ]
+              </a>
+            </div>
+
+            <div class="hero-social-links">
+              <span class="term-dim">CHANNELS:</span>
+              <a href="https://github.com/Krish-legend13" target="_blank" rel="noopener noreferrer"
+                class="hero-social-link">
+                <span>GITHUB</span> ↗
+              </a>
+              <a href="https://linkedin.com/in/g-murali-krishnan-74b0a036" target="_blank" rel="noopener noreferrer"
+                class="hero-social-link">
+                <span>LINKEDIN</span> ↗
+              </a>
+              <a href="https://tryhackme.com/p/HunterHacker05?tab=yearly-activity" target="_blank"
+                rel="noopener noreferrer" class="hero-social-link">
+                <span>THM (TOP 1%)</span> ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Operator Dossier Photo & Status Panel -->
+          <div class="hero-vis-container">
+            <div class="operator-photo-card">
+              <div class="operator-photo-header">
+                <div class="header-status-indicator">
+                  <span class="pulse-indicator-dot"></span>
+                  <span class="term-cyan">VAPT PROFILE // GMK-012</span>
+                </div>
+                <span class="term-green" id="telemetry-live-clock">UTC 00:00:00</span>
+              </div>
+
+              <div class="operator-photo-frame">
+                <!-- Tech Corner Brackets -->
+                <div class="tech-corner corner-tl" aria-hidden="true"></div>
+                <div class="tech-corner corner-tr" aria-hidden="true"></div>
+                <div class="tech-corner corner-bl" aria-hidden="true"></div>
+                <div class="tech-corner corner-br" aria-hidden="true"></div>
+
+                <img src="Mk.jpeg" alt="G Murali Krishnan - VAPT Engineer" class="operator-avatar-img" width="1122"
+                  height="1402" loading="eager" />
+
+                <div class="photo-tactical-overlay">
+                  <div class="tactical-badge">
+                    <span class="tac-dot"></span>
+                    <span>VERIFIED // VAPT ENGINEER</span>
+                  </div>
+                  <div class="tactical-id">
+                    <span>FINAL YEAR</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Desktop Floating Status Panel -->
+            <div class="operator-status-panel">
+              <div class="panel-header-bar">
+                <span>STATUS & TELEMETRY</span>
+                <span class="term-green">ACTIVE</span>
+              </div>
+              <div class="status-data-grid">
+                <div class="status-data-item">
+                  <span class="status-key">OPERATOR:</span>
+                  <span class="status-val cyan">G MURALI KRISHNAN</span>
+                </div>
+                <div class="status-data-item">
+                  <span class="status-key">PRIMARY ROLE:</span>
+                  <span class="status-val green">VAPT ENGINEER</span>
+                </div>
+                <div class="status-data-item">
+                  <span class="status-key">SPECIALIZATION:</span>
+                  <span class="status-val">WEB APP SECURITY</span>
+                </div>
+                <div class="status-data-item">
+                  <span class="status-key">CAREER PATH:</span>
+                  <span class="status-val yellow">VAPT → RED TEAM</span>
+                </div>
+                <div class="status-data-item">
+                  <span class="status-key">TELEMETRY:</span>
+                  <span class="status-val green">● ONLINE (100% OK)</span>
+                </div>
+                <div class="status-data-item">
+                  <span class="status-key">CURRENT FOCUS:</span>
+                  <span class="status-val">OFFENSIVE SECURITY</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         04. 01 / RECON (About & Methodology)
+         ========================================================================== -->
+    <section id="recon" aria-label="Reconnaissance and Profile">
+      <div class="section-container">
+        <header class="section-header">
+          <div class="section-tag">01 / RECON</div>
+          <h2 class="section-title">WHO IS MURALI?</h2>
+          <p class="section-subtitle">
+            Reconnaissance dossier covering background, core philosophy, and offensive security career trajectory.
+          </p>
+        </header>
+
+        <div class="recon-grid">
+          <!-- Quote & Identity Dossier -->
+          <div class="recon-profile-box tech-box">
+            <div class="recon-bio-content">
+              <p class="recon-bio-lead">
+                I am <strong>G Murali Krishnan</strong>, a Cyber Security student, with a strong focus on
+                <strong>VAPT</strong>, web application security, API security, and offensive security.
+              </p>
+              <p class="recon-bio-para">
+                What makes my work different is that I enjoy working on both sides of a product. I don't only look at
+                how an application is built — I also look at how it can fail, how it can be attacked, and how it can be
+                secured.
+              </p>
+              <p class="recon-bio-para">
+                I build software applications, security tools, and cybersecurity projects while continuously developing
+                my skills in penetration testing, vulnerability assessment, network security, API security, and Red Team
+                concepts.
+              </p>
+              <p class="recon-bio-para">
+                My projects range from SQL injection detection and phishing analysis to AI-based systems, blockchain
+                applications, secure messaging, and digital forensics. Through CTFs, internships, and hands-on security
+                work, I continue to develop the ability to understand a system from both a developer's and an attacker's
+                perspective.
+              </p>
+              <p class="recon-bio-para">
+                My long-term goal is to become a strong <strong>Red Team professional</strong> who can understand the
+                complete lifecycle of a system — from development and deployment to vulnerability discovery,
+                exploitation, detection, and defense.
+              </p>
+            </div>
+
+            <table class="recon-intel-table">
+              <tbody>
+                <tr>
+                  <td>IDENTITY</td>
+                  <td>G Murali Krishnan</td>
+                </tr>
+                <tr>
+                  <td>PRIMARY FOCUS</td>
+                  <td><span class="term-green">VAPT (Vulnerability Assessment & Pentesting)</span></td>
+                </tr>
+                <tr>
+                  <td>SPECIALIZATION</td>
+                  <td><span class="term-cyan">Web Application Security & Tool Development</span></td>
+                </tr>
+                <tr>
+                  <td>INTEREST</td>
+                  <td>Offensive Security, Exploit Discovery & CTFs</td>
+                </tr>
+                <tr>
+                  <td>CAREER TARGET</td>
+                  <td><span class="term-yellow">Red Team Operations / Adversary Emulation</span></td>
+                </tr>
+                <tr>
+                  <td>OPERATING BASE</td>
+                  <td>Bengaluru, India</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Education Card -->
+          <div class="education-tech-card tech-box">
+            <div class="edu-badge">CURRENT DEGREE // 2023–2027</div>
+            <h3 class="edu-degree">B.E. Computer Science & Engineering</h3>
+            <div class="edu-institution">Cyber Security Specialization</div>
+            <div style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px;">
+              Sambhram Institute of Technology, Bengaluru
+            </div>
+            <div class="edu-score-badge">
+              CGPA: 8.7 / 10
+            </div>
+
+            <div class="edu-sub-list">
+              <div class="edu-sub-entry">
+                <div class="edu-sub-badge">PRE-UNIVERSITY</div>
+                <div class="edu-sub-name">Indian Academy Pre-University (PCMC)</div>
+                <div class="edu-sub-meta">
+                  <span class="edu-sub-score">88.8%</span>
+                  <span class="edu-sub-year">2021 — 2023</span>
+                </div>
+              </div>
+              <div class="edu-sub-entry">
+                <div class="edu-sub-badge">SCHOOL</div>
+                <div class="edu-sub-name">Young Scholars Academy — School (CBSE)</div>
+                <div class="edu-sub-meta">
+                  <span class="edu-sub-score">80.8%</span>
+                  <span class="edu-sub-year">2018 — 2021</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Career Path Visualization -->
+        <div class="career-path-module">
+          <div class="career-path-title">// STRATEGIC CAREER ROADMAP: VAPT → RED TEAM OPERATOR</div>
+          <div class="career-nodes-wrapper">
+            <div class="career-node-card active">
+              <div class="career-node-step">PHASE 01</div>
+              <div class="career-node-name">Cybersecurity</div>
+              <div class="career-node-desc">Systems, network protocols, cryptography & Linux baselines.</div>
+            </div>
+            <div class="career-node-card active">
+              <div class="career-node-step">PHASE 02</div>
+              <div class="career-node-name">VAPT</div>
+              <div class="career-node-desc">Vulnerability assessment & penetration testing frameworks.</div>
+            </div>
+            <div class="career-node-card active">
+              <div class="career-node-step">PHASE 03</div>
+              <div class="career-node-name">Web Pentesting</div>
+              <div class="career-node-desc">OWASP Top 10, API security, SQLi, XSS, and access controls.</div>
+            </div>
+            <div class="career-node-card active">
+              <div class="career-node-step">PHASE 04</div>
+              <div class="career-node-name">Offensive Sec</div>
+              <div class="career-node-desc">Weaponized scripts, automated scanners, and CTF exploitation.</div>
+            </div>
+            <div class="career-node-card active">
+              <div class="career-node-step">PHASE 05</div>
+              <div class="career-node-name">Red Team</div>
+              <div class="career-node-desc">Active Directory tradecraft, MITRE ATT&CK, lateral movement.</div>
+            </div>
+            <div class="career-node-card target-node">
+              <div class="career-node-step">DESTINATION</div>
+              <div class="career-node-name">Red Team Operator</div>
+              <div class="career-node-desc">Adversary simulation, covert ops, and threat defense advisory.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Security Mindset: How I Approach a Target -->
+        <div class="methodology-module">
+          <div class="section-tag" style="margin-bottom: 20px;">VAPT METHODOLOGY</div>
+          <h3 style="font-size: 24px; font-weight: 700; color: var(--text-pure); margin-bottom: 28px;">
+            HOW I APPROACH A TARGET
+          </h3>
+          <div class="methodology-grid">
+            <div class="method-card">
+              <div class="method-num">01 // RECON</div>
+              <h4 class="method-title">Understand Attack Surface</h4>
+              <div class="method-sub">Passive & Active Footprinting</div>
+              <p class="method-desc">OSINT, subdomain discovery, certificate transparency logs, and perimeter
+                infrastructure mapping.</p>
+            </div>
+            <div class="method-card">
+              <div class="method-num">02 // ENUMERATE</div>
+              <h4 class="method-title">Identify Endpoints & Tech</h4>
+              <div class="method-sub">Port & API Discovery</div>
+              <p class="method-desc">Deep service fingerprinting, hidden route fuzzing (ffuf/Gobuster), and API schema
+                inspection.</p>
+            </div>
+            <div class="method-card">
+              <div class="method-num">03 // TEST</div>
+              <h4 class="method-title">Validate Vulnerabilities</h4>
+              <div class="method-sub">OWASP WSTG & Logic Probing</div>
+              <p class="method-desc">Probing injection vectors, broken access controls (IDOR), session integrity, and
+                input validation.</p>
+            </div>
+            <div class="method-card">
+              <div class="method-num">04 // EXPLOIT</div>
+              <h4 class="method-title">Demonstrate Impact Responsibly</h4>
+              <div class="method-sub">Controlled PoC Validation</div>
+              <p class="method-desc">Crafting safe Proof-of-Concepts to confirm exploitability without causing
+                operational disruption.</p>
+            </div>
+            <div class="method-card">
+              <div class="method-num">05 // DOCUMENT</div>
+              <h4 class="method-title">Capture Evidence & Risk</h4>
+              <div class="method-sub">CVSS 3.1 & Technical Narrative</div>
+              <p class="method-desc">Clear remediation guidelines, reproducible attack narrative, and executive impact
+                summaries.</p>
+            </div>
+            <div class="method-card">
+              <div class="method-num">06 // REMEDIATE</div>
+              <h4 class="method-title">Recommend Fixes & Retest</h4>
+              <div class="method-sub">Hardening Verification</div>
+              <p class="method-desc">Collaborating with development teams and performing validation re-scans to ensure
+                closures.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         05. 02 / ARSENAL (Interactive Capability Matrix)
+         ========================================================================== -->
+    <section id="arsenal" aria-label="Cyber Arsenal and Skills">
+      <div class="section-container">
+        <header class="section-header">
+          <div class="section-tag">02 / ARSENAL</div>
+          <h2 class="section-title">CYBER ARSENAL & TOOLING</h2>
+          <p class="section-subtitle">
+            Tools, techniques, and technologies I use to understand and test systems.
+          </p>
+        </header>
+
+        <div class="arsenal-module">
+          <div class="arsenal-nav-tabs" role="tablist">
+            <button type="button" class="arsenal-tab-btn active" data-cat="web" role="tab" aria-selected="true">
+              [ WEB APPLICATION SECURITY ]
+            </button>
+            <button type="button" class="arsenal-tab-btn" data-cat="network" role="tab" aria-selected="false">
+              [ NETWORK / INFRASTRUCTURE ]
+            </button>
+            <button type="button" class="arsenal-tab-btn" data-cat="redteam" role="tab" aria-selected="false">
+              [ RED TEAM / AD SECURITY ]
+            </button>
+            <button type="button" class="arsenal-tab-btn" data-cat="tools" role="tab" aria-selected="false">
+              [ TOOLS & PLATFORMS ]
+            </button>
+            <button type="button" class="arsenal-tab-btn" data-cat="programming" role="tab" aria-selected="false">
+              [ PROGRAMMING & SCRIPTING ]
+            </button>
+          </div>
+
+          <div class="arsenal-terminal-preview" id="arsenal-term-cmd">
+            $ <span class="term-cyan">load_module web_security</span><br>
+            <span class="term-green">[+] Loaded 12 verified offensive/security modules.</span>
+          </div>
+
+          <div class="arsenal-content-body">
+            <div class="skills-badge-grid" id="arsenal-skills-container">
+              <!-- Injected via app.js -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         06. 03 / MISSIONS (Project Dossiers)
+         ========================================================================== -->
+    <section id="missions" aria-label="Security Projects and Tools">
+      <div class="section-container">
+        <header class="section-header">
+          <div class="section-tag">03 / PROJECTS</div>
+          <h2 class="section-title">SECURITY PROJECTS & TOOLS</h2>
+          <p class="section-subtitle">
+            Security tools, platforms, and automated frameworks I've built. Click any card for full project details.
+          </p>
+        </header>
+
+        <div class="missions-grid" id="missions-grid-container">
+          <!-- Injected via app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         07. 04 / FIELD EXPERIENCE (Internships)
+         ========================================================================== -->
+    <section id="experience" aria-label="Field Experience and Internships">
+      <div class="section-container">
+        <header class="section-header">
+          <div class="section-tag">04 / FIELD EXPERIENCE</div>
+          <h2 class="section-title">PRACTICAL FIELD EXPERIENCE</h2>
+          <p class="section-subtitle">
+            Hands-on penetration testing internships, vulnerability assessment workflows, and offensive tool
+            engineering.
+          </p>
+        </header>
+
+        <div class="experience-timeline">
+
+          <!-- Supraja Technologies (Current Role) -->
+          <div class="exp-timeline-item">
+            <div class="exp-timeline-marker" style="border-color: var(--green); box-shadow: 0 0 10px var(--green);">
+            </div>
+            <div class="exp-card" data-exp-id="supraja" data-cursor="VIEW DETAILS">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-role">Advanced Cyber Security</h3>
+                  <div class="exp-company">Supraja Technologies &nbsp;•&nbsp; <span
+                      style="color: var(--cyan); font-size: 0.9em;">SOC + Advanced VAPT + API Pentesting</span></div>
+                </div>
+                <div class="exp-period-badge"
+                  style="color: var(--green); border-color: rgba(0,255,136,0.5); background: rgba(0,255,136,0.1);">●
+                  CURRENT &nbsp; July 2025 – Present</div>
+              </div>
+              <p class="exp-summary">
+                Performing hands-on VAPT, API penetration testing, web application vulnerability assessment, and SOC
+                operations using Splunk/SIEM for security monitoring and log analysis.
+              </p>
+              <ul class="exp-highlights-list">
+                <li>Performing hands-on VAPT, API penetration testing, and web application vulnerability assessment
+                  following OWASP Top 10 and WSTG.</li>
+                <li>Using Splunk and SIEM tools to support SOC operations, security monitoring, and log analysis.</li>
+                <li>Architected and developed the Advanced SQL Injection Scanner and secure messaging applications.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Skillcraft Technologies -->
+          <div class="exp-timeline-item">
+            <div class="exp-timeline-marker"></div>
+            <div class="exp-card" data-exp-id="skillcraft" data-cursor="VIEW DETAILS">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-role">Cybersecurity Intern (Project-Based)</h3>
+                  <div class="exp-company">Skillcraft Technologies</div>
+                </div>
+                <div class="exp-period-badge">September 2025 – October 2025</div>
+              </div>
+              <p class="exp-summary">
+                Contributed to offensive security and defensive tool development within controlled laboratory
+                environments.
+              </p>
+              <ul class="exp-highlights-list">
+                <li>Built security-focused project utilities in controlled, isolated laboratory environments.</li>
+                <li>Applied vulnerability testing techniques targeting authentication bypass and privilege escalation
+                  scenarios.</li>
+                <li>Investigated session handling flaws and formulated remediation documentation.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Elevate Labs -->
+          <div class="exp-timeline-item">
+            <div class="exp-timeline-marker"></div>
+            <div class="exp-card" data-exp-id="elevate" data-cursor="VIEW DETAILS">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-role">Cybersecurity Intern (Project-Based)</h3>
+                  <div class="exp-company">Elevate Labs</div>
+                </div>
+                <div class="exp-period-badge">October 2025 – December 2025</div>
+              </div>
+              <p class="exp-summary">
+                Worked on simulated adversary tradecraft, web vulnerability identification, exploitation, and risk
+                reporting.
+              </p>
+              <ul class="exp-highlights-list">
+                <li>Simulated real-world offensive attack scenarios mimicking red team tactics and tradecraft.</li>
+                <li>Practiced systematic web vulnerability discovery across target web application scopes.</li>
+                <li>Drafted detailed vulnerability findings, impact metrics, and mitigation advisory documentation.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         08. 05 / OPERATIONS (CTFs, TryHackMe, Certs)
+         ========================================================================== -->
+    <section id="operations" aria-label="Cyber Operations and Achievements">
+      <div class="section-container">
+        <header class="section-header">
+          <div class="section-tag">05 / ACHIEVEMENTS</div>
+          <h2 class="section-title">ACHIEVEMENTS</h2>
+          <p class="section-subtitle">
+            CTF achievements, cybersecurity competitions, skill development milestones, and practical security
+            accomplishments.
+          </p>
+        </header>
+
+        <div class="operations-layout">
+          <!-- Left Column: CTF Wall -->
+          <div class="ctf-operations-wall">
+            <div class="section-tag" style="margin-bottom: 8px;">ACHIEVEMENTS & CTFs</div>
+
+            <div class="ctf-op-card" data-op-id="ghostwire" data-cursor="VIEW DETAILS">
+              <div class="ctf-op-left">
+                <span class="ctf-badge">🥇 1ST PLACE WINNER</span>
+                <h3 class="ctf-title">Ghostwire CTF</h3>
+                <div class="ctf-event">Tech Habba — Atria Institute of Technology</div>
+                <p class="ctf-desc">Winner in collegiate multi-track CTF covering web security, cryptography, and binary
+                  challenges.</p>
+              </div>
+              <div class="ctf-date-tag">April 2026</div>
+            </div>
+
+            <div class="ctf-op-card" data-op-id="level4-sdp" data-cursor="VIEW DETAILS">
+              <div class="ctf-op-left">
+                <span class="ctf-badge">🥇 1ST PLACE WINNER</span>
+                <h3 class="ctf-title">Level 4 SDP CTF</h3>
+                <div class="ctf-event">Supraja Technologies</div>
+                <p class="ctf-desc">Champion in advanced capstone tournament evaluating ICS/SCADA security fundamentals
+                  and web exploitation.</p>
+              </div>
+              <div class="ctf-date-tag">March 2026</div>
+            </div>
+
+            <div class="ctf-op-card" data-op-id="level3-sdp" data-cursor="VIEW DETAILS">
+              <div class="ctf-op-left">
+                <span class="ctf-badge">🥇 1ST PLACE WINNER</span>
+                <h3 class="ctf-title">Level 3 SDP CTF</h3>
+                <div class="ctf-event">Supraja Technologies</div>
+                <p class="ctf-desc">1st Place in SOC incident analysis, log investigation, and advanced web penetration
+                  testing.</p>
+              </div>
+              <div class="ctf-date-tag">November 2025</div>
+            </div>
+
+            <div class="ctf-op-card" data-op-id="acharya" data-cursor="VIEW DETAILS">
+              <div class="ctf-op-left">
+                <span class="ctf-badge">🥇 1ST PLACE WINNER</span>
+                <h3 class="ctf-title">Acharya Institute of Technology CTF</h3>
+                <div class="ctf-event">Acharya Institute of Technology, Bangalore</div>
+                <p class="ctf-desc">Podium finish out of collegiate security teams in multi-phase web vulnerability
+                  exploitation challenges.</p>
+              </div>
+              <div class="ctf-date-tag">October 2025</div>
+            </div>
+
+            <div class="ctf-op-card" data-op-id="level2-sdp" data-cursor="VIEW DETAILS">
+              <div class="ctf-op-left">
+                <span class="ctf-badge">🥇 1ST PLACE WINNER</span>
+                <h3 class="ctf-title">Level 2 SDP CTF</h3>
+                <div class="ctf-event">Supraja Technologies</div>
+                <p class="ctf-desc">Top winner in web application vulnerability testing and manual exploit execution.
+                </p>
+              </div>
+              <div class="ctf-date-tag">May 2025</div>
+            </div>
+
+            <div class="ctf-op-card" data-op-id="level1-sdp" data-cursor="VIEW DETAILS">
+              <div class="ctf-op-left">
+                <span class="ctf-badge" style="color: var(--cyan);">🥈 RUNNER-UP</span>
+                <h3 class="ctf-title">Level 1 SDP CTF</h3>
+                <div class="ctf-event">Supraja Technologies</div>
+                <p class="ctf-desc">Runner-up in cybersecurity foundations, networking, and protocol analysis
+                  challenges.</p>
+              </div>
+              <div class="ctf-date-tag">December 2024</div>
+            </div>
+
+            <!-- CTF Participations Card -->
+            <div class="ctf-op-card ctf-participation-card" data-op-id="ctf-participations" data-cursor="VIEW LIST">
+              <div class="ctf-op-left">
+                <span class="ctf-badge" style="color: var(--amber);">10+ CTF PARTICIPATIONS</span>
+                <h3 class="ctf-title">CTF Participation Record</h3>
+                <div class="ctf-event">Multiple Competitions — Nationwide</div>
+                <p class="ctf-desc">Active participant across 10+ national and college-level CTF competitions. Click to
+                  view the full list.</p>
+              </div>
+              <div class="ctf-date-tag">2024 – 2026</div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: TryHackMe & Certifications -->
+          <div class="operations-right-col">
+            <!-- Dedicated TryHackMe Block -->
+            <div class="thm-hero-card">
+              <div class="thm-tag">// TRYHACKME PLATFORM TELEMETRY</div>
+              <div class="thm-rank-highlight">
+                TOP <span>1%</span>
+              </div>
+              <div style="font-family: var(--font-mono); font-size: 13px; color: var(--text-primary);">
+                Handle: <strong class="term-green">HunterHacker05</strong>
+              </div>
+              <div class="thm-metrics-grid">
+                <div class="thm-metric-box">
+                  <div class="thm-metric-label">CORE FOCUS</div>
+                  <div class="thm-metric-val">Web Pentesting</div>
+                </div>
+                <div class="thm-metric-box">
+                  <div class="thm-metric-label">STATUS</div>
+                  <div class="thm-metric-val green">Active Operations</div>
+                </div>
+                <div class="thm-metric-box">
+                  <div class="thm-metric-label">ACHIEVEMENT</div>
+                  <div class="thm-metric-val">Multiple Rooms Cleared</div>
+                </div>
+                <div class="thm-metric-box">
+                  <div class="thm-metric-label">GLOBAL RANKING</div>
+                  <div class="thm-metric-val cyan">Top 1% Platform</div>
+                </div>
+              </div>
+              <a href="https://tryhackme.com/p/HunterHacker05?tab=yearly-activity" target="_blank"
+                rel="noopener noreferrer" class="cyber-btn cyber-btn-green" data-cursor-color="green">
+                [ OPEN TRYHACKME PROFILE ] ↗
+              </a>
+            </div>
+
+            <!-- Certifications & Training -->
+            <div class="certifications-block">
+              <div class="section-tag" style="margin-bottom: 8px;">TRAINING & CERTIFICATION AUDIT</div>
+
+              <div class="cert-card">
+                <div class="cert-title">Web Application Penetration Testing</div>
+                <div class="cert-issuer">Supraja Technologies (2025)</div>
+                <div class="cert-desc">OWASP Top 10, manual penetration testing, vulnerability discovery, and
+                  professional security report creation.</div>
+              </div>
+
+              <div class="cert-card">
+                <div class="cert-title">OSINT Investigation Techniques</div>
+                <div class="cert-issuer">Cyber Secured India | CTRL.ALT.ACT (2025)</div>
+                <div class="cert-desc">Practical OSINT investigative methodologies, passive asset reconnaissance, and
+                  identity footprinting.</div>
+              </div>
+
+              <div class="cert-card">
+                <div class="cert-title">Supraja Skill Development Programs (L1–L4)</div>
+                <div class="cert-issuer">Supraja Technologies (2024–2026)</div>
+                <div class="cert-desc">Level 1 Foundations, Level 2 VAPT, Level 3 SOC & Web Pentesting, Level 4
+                  Industrial Cyber Security (ICS).</div>
+              </div>
+
+              <div class="cert-card">
+                <div class="cert-title">Technical Bootcamps</div>
+                <div class="cert-issuer">React, Java & Full Stack Development</div>
+                <div class="cert-desc">Full stack architecture training to understand software internals and identify
+                  implementation flaws.</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Attack Surface Visualization Module -->
+        <div class="attack-surface-module">
+          <div class="section-tag" style="margin-bottom: 12px;">INTERACTIVE RECON MATRIX</div>
+          <h3 style="font-size: 22px; font-weight: 700; color: var(--text-pure); margin-bottom: 8px;">
+            ATTACK-SURFACE TAXONOMY
+          </h3>
+          <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 24px;">
+            Explore the target landscape: select any vector node to inspect the testing methodology and vulnerability
+            criteria.
+          </p>
+
+          <div class="attack-tree-container">
+            <!-- Node Graph -->
+            <div class="attack-tree-graph">
+              <div class="tree-root-node">
+                <span class="term-cyan term-bold">⬢ TARGET ROOT (Enterprise / Scope)</span>
+                <span class="term-dim">SCOPE BOUNDARY</span>
+              </div>
+
+              <!-- Web Branch -->
+              <div class="tree-branch-group">
+                <div class="tree-branch-header">
+                  <span class="term-green term-bold">▾ WEB APPLICATION SURFACE</span>
+                  <span class="term-dim">HTTP / HTTPS</span>
+                </div>
+                <div class="tree-leaf-nodes">
+                  <button type="button" class="tree-node-btn active" data-node-id="web-login">
+                    AUTH & SESSIONS
+                  </button>
+                  <button type="button" class="tree-node-btn" data-node-id="web-api">
+                    REST / GRAPHQL APIs
+                  </button>
+                  <button type="button" class="tree-node-btn" data-node-id="web-inputs">
+                    INPUTS & INJECTIONS
+                  </button>
+                </div>
+              </div>
+
+              <!-- Network Branch -->
+              <div class="tree-branch-group">
+                <div class="tree-branch-header">
+                  <span class="term-cyan term-bold">▾ NETWORK INFRASTRUCTURE</span>
+                  <span class="term-dim">TCP / IP</span>
+                </div>
+                <div class="tree-leaf-nodes">
+                  <button type="button" class="tree-node-btn" data-node-id="net-services">
+                    NETWORK SERVICES (SMB/SSH/RDP)
+                  </button>
+                  <button type="button" class="tree-node-btn" data-node-id="net-ports">
+                    EXPOSED PORTS & DAEMONS
+                  </button>
+                </div>
+              </div>
+
+              <!-- Human Branch -->
+              <div class="tree-branch-group">
+                <div class="tree-branch-header">
+                  <span class="term-yellow term-bold">▾ HUMAN LAYER</span>
+                  <span class="term-dim">OSINT / PHISHING</span>
+                </div>
+                <div class="tree-leaf-nodes">
+                  <button type="button" class="tree-node-btn" data-node-id="human">
+                    SOCIAL ENGINEERING & OSINT
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Inspection Panel -->
+            <div class="attack-intel-inspect" id="attack-intel-inspect">
+              <!-- Injected via app.js -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         09. TERMINAL LAB (Interactive Virtual Shell)
+         ========================================================================== -->
+    <section id="terminal-lab" aria-label="Interactive Terminal Lab">
+      <div class="section-container">
+        <header class="section-header">
+          <div class="section-tag">TERMINAL LAB</div>
+          <h2 class="section-title">OFFENSIVE SECURITY CONSOLE</h2>
+          <p class="section-subtitle">
+            Interact with the simulated terminal workstation. Type commands or click shortcut chips to explore profiles,
+            skills, achievements, or Easter eggs.
+          </p>
+        </header>
+
+        <div class="terminal-lab-wrapper" id="terminal-lab-container">
+          <div class="terminal-header-bar">
+            <div class="term-dots">
+              <span class="term-dot red"></span>
+              <span class="term-dot yellow"></span>
+              <span class="term-dot green"></span>
+            </div>
+            <div class="term-title">murali@vapt-lab:~ (zsh / simulated)</div>
+            <div style="font-family: var(--font-mono); font-size: 10px; color: var(--green);">● SECURE</div>
+          </div>
+
+          <div class="terminal-output" role="log" aria-live="polite">
+            <!-- Terminal output stream -->
+          </div>
+
+          <div class="terminal-input-bar">
+            <span class="terminal-prompt">murali@vapt-lab:~$</span>
+            <input type="text" class="terminal-input" placeholder="Type 'help' for command list..." spellcheck="false"
+              autocomplete="off" aria-label="Terminal command input">
+          </div>
+
+          <div class="term-quick-chips">
+            <span class="term-dim" style="font-family: var(--font-mono); font-size: 11px; align-self: center;">QUICK
+              COMMANDS:</span>
+            <button type="button" class="term-quick-btn" data-cmd="help">help</button>
+            <button type="button" class="term-quick-btn" data-cmd="whoami">whoami</button>
+            <button type="button" class="term-quick-btn" data-cmd="skills">skills</button>
+            <button type="button" class="term-quick-btn" data-cmd="projects">projects</button>
+            <button type="button" class="term-quick-btn" data-cmd="experience">experience</button>
+            <button type="button" class="term-quick-btn" data-cmd="achievements">achievements</button>
+            <button type="button" class="term-quick-btn" data-cmd="scan">scan</button>
+            <button type="button" class="term-quick-btn" data-cmd="resume">resume</button>
+            <button type="button" class="term-quick-btn" data-cmd="clear">clear</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         10. 06 / CONTACT & ENGAGEMENT
+         ========================================================================== -->
+    <section id="contact" aria-label="Contact and Communication">
+      <div class="section-container">
+        <div class="contact-grid">
+
+          <div class="contact-left">
+            <div class="section-tag">06 / CONTACT</div>
+            <h2>HIRE ME</h2>
+            <p class="contact-desc">
+              Open to cybersecurity opportunities, security projects, freelance work, collaborations, and technical
+              roles. Let's work together.
+            </p>
+
+            <div class="contact-availability-grid">
+              <div class="avail-label">OPEN TO:</div>
+              <div class="avail-tags">
+                <span class="avail-tag">VAPT</span>
+                <span class="avail-tag">Ethical Hacking</span>
+                <span class="avail-tag">Web Pentesting</span>
+                <span class="avail-tag">Red Team</span>
+                <span class="avail-tag">Blue Team</span>
+                <span class="avail-tag">Purple Team</span>
+                <span class="avail-tag">Digital Forensics</span>
+                <span class="avail-tag">SOC / Security Operations</span>
+                <span class="avail-tag">Offensive Security</span>
+                <span class="avail-tag">Software Development</span>
+                <span class="avail-tag">Web Development</span>
+                <span class="avail-tag">CTF Invitations</span>
+                <span class="avail-tag">Freelance Projects</span>
+                <span class="avail-tag">Security Collaborations</span>
+              </div>
+            </div>
+
+            <div class="contact-quick-endpoints">
+              <a href="mailto:muralikrishnancy2021@gmail.com" class="endpoint-card">
+                <div class="endpoint-info">
+                  <span class="endpoint-label">EMAIL</span>
+                  <span class="endpoint-val">muralikrishnancy2021@gmail.com</span>
+                </div>
+                <span class="term-cyan">SEND ↗</span>
+              </a>
+
+              <div class="endpoint-card" style="cursor: pointer;" id="copy-email-btn">
+                <div class="endpoint-info">
+                  <span class="endpoint-label">COPY EMAIL</span>
+                  <span class="endpoint-val">[ COPY EMAIL ADDRESS ]</span>
+                </div>
+                <span class="term-green">COPY</span>
+              </div>
+
+              <a href="https://wa.me/917259916747" target="_blank" rel="noopener noreferrer" class="endpoint-card">
+                <div class="endpoint-info">
+                  <span class="endpoint-label">WHATSAPP</span>
+                  <span class="endpoint-val">+91 7259916747</span>
+                </div>
+                <span class="term-green">CHAT ↗</span>
+              </a>
+
+              <a href="https://linkedin.com/in/g-murali-krishnan-74b0a036" target="_blank" rel="noopener noreferrer"
+                class="endpoint-card">
+                <div class="endpoint-info">
+                  <span class="endpoint-label">LINKEDIN</span>
+                  <span class="endpoint-val">in/g-murali-krishnan-74b0a036</span>
+                </div>
+                <span class="term-cyan">CONNECT ↗</span>
+              </a>
+
+              <a href="https://github.com/Krish-legend13" target="_blank" rel="noopener noreferrer"
+                class="endpoint-card">
+                <div class="endpoint-info">
+                  <span class="endpoint-label">GITHUB</span>
+                  <span class="endpoint-val">github.com/Krish-legend13</span>
+                </div>
+                <span class="term-cyan">CODE ↗</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-box">
+            <div class="section-tag" style="margin-bottom: 16px;">CONTACT ME</div>
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="form-sender-name" class="form-label">YOUR NAME</label>
+                <input type="text" id="form-sender-name" class="form-input"
+                  placeholder="e.g. Alex (Security Lead / Recruiter)" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-subject-type" class="form-label">PURPOSE / OPPORTUNITY</label>
+                <select id="form-subject-type" class="form-select">
+                  <option value="VAPT Opportunity">VAPT / Pentesting Opportunity</option>
+                  <option value="Red Team Role">Red Team / Offensive Security Role</option>
+                  <option value="Security Project Collab">Security Project / Collaboration</option>
+                  <option value="Freelance Work">Freelance / Contract Work</option>
+                  <option value="CTF / Challenge Discussion">CTF / Challenge Discussion</option>
+                  <option value="General Inquiry">General Inquiry</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label">MESSAGE</label>
+                <textarea id="form-message" class="form-textarea"
+                  placeholder="Tell me about the role, project, or what you'd like to discuss..." required></textarea>
+              </div>
+
+              <button type="submit" class="cyber-btn cyber-btn-green" style="width: 100%;">
+                [ LET'S WORK TOGETHER ]
+              </button>
+
+              <div id="contact-form-status" style="margin-top: 12px; font-family: var(--font-mono); font-size: 11px;">
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Final System Status Banner -->
+    <div class="final-status-bar">
+      <div class="section-container">
+        <div class="final-creed">
+          <span>I BUILD.</span> <span>I BREAK.</span> <span>I SECURE.</span>
+        </div>
+        <div class="final-meta">
+          <span>STATUS: <strong class="term-green">● AVAILABLE FOR HIRE</strong></span>
+          <span>NAME: <strong>G MURALI KRISHNAN</strong></span>
+          <span>SPECIALIZATION: <strong>VAPT / WEB SECURITY</strong></span>
+          <span>GOAL: <strong>RED TEAM OPERATOR</strong></span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="cyber-footer">
+    <div class="footer-container">
+      <div>
+        <strong>G MURALI KRISHNAN</strong> // VAPT ENGINEER & ASPIRING RED TEAMER
+        <div style="color: var(--text-muted); font-size: 11px; margin-top: 4px;">
+          © 2026 G Murali Krishnan. Hardened for performance and accessibility.
+        </div>
+      </div>
+
+      <ul class="footer-links">
+        <li><a href="https://github.com/Krish-legend13" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/g-murali-krishnan-74b0a036" target="_blank"
+            rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="https://tryhackme.com/p/HunterHacker05?tab=yearly-activity" target="_blank"
+            rel="noopener noreferrer">TryHackMe</a></li>
+        <li><a href="mailto:muralikrishnancy2021@gmail.com">Email</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL 01: Project Case Study Dossier Modal
+       ========================================================================== -->
+  <div class="cyber-modal-overlay" id="dossier-modal" role="dialog" aria-modal="true" aria-label="Project Details">
+    <div class="cyber-modal-box">
+      <div class="modal-header-bar">
+        <div class="modal-title-wrap">
+          <span class="modal-code-badge">PROJECT DETAILS</span>
+          <h2 class="modal-title">Project Overview</h2>
+        </div>
+        <button type="button" class="modal-close-btn" aria-label="Close dossier modal">✕</button>
+      </div>
+      <div class="modal-scroll-body">
+        <!-- Injected via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL 02: In-Site PDF Resume Viewer Modal
+       ========================================================================== -->
+  <div class="cyber-modal-overlay" id="resume-modal" role="dialog" aria-modal="true"
+    aria-label="In-Site Resume PDF Viewer">
+    <div class="cyber-modal-box pdf-modal-box">
+      <div class="modal-header-bar">
+        <div class="modal-title-wrap">
+          <span class="modal-code-badge term-green">DOCUMENT VIEWER // VERIFIED</span>
+          <h2 class="modal-title">G Murali Krishnan — Resume</h2>
+        </div>
+        <button type="button" class="modal-close-btn" id="resume-modal-close"
+          aria-label="Close resume viewer">✕</button>
+      </div>
+
+      <div class="pdf-toolbar">
+        <div class="pdf-toolbar-group">
+          <button type="button" class="cyber-btn cyber-btn-outline cyber-btn-sm" id="pdf-zoom-in">[ ZOOM + ]</button>
+          <button type="button" class="cyber-btn cyber-btn-outline cyber-btn-sm" id="pdf-zoom-out">[ ZOOM - ]</button>
+          <button type="button" class="cyber-btn cyber-btn-outline cyber-btn-sm" id="pdf-zoom-reset">[ RESET ]</button>
+          <button type="button" class="cyber-btn cyber-btn-outline cyber-btn-sm desktop-only" id="pdf-fullscreen-btn">[
+            FULLSCREEN ]</button>
+        </div>
+
+        <div class="pdf-toolbar-group">
+          <a href="G Murali Krishnan - 1ST23CY012.pdf" target="_blank" rel="noopener noreferrer"
+            class="cyber-btn cyber-btn-outline cyber-btn-sm">
+            [ OPEN IN TAB ] ↗
+          </a>
+          <a href="G Murali Krishnan - 1ST23CY012.pdf" download="G_Murali_Krishnan_Resume.pdf"
+            class="cyber-btn cyber-btn-primary cyber-btn-sm">
+            [ DOWNLOAD PDF ]
+          </a>
+        </div>
+      </div>
+
+      <div class="pdf-frame-wrapper">
+        <iframe id="resume-pdf-frame" src="about:blank" title="G Murali Krishnan Resume PDF"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="terminal.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
