@@ -393,7 +393,7 @@ Profile:    <a href="${thm.url}" target="_blank" rel="noopener noreferrer" class
     }
 
     cmdLinkedin() {
-      const url = 'https://linkedin.com/in/g-murali-krishnan-74b0a036';
+      const url = 'https://www.linkedin.com/in/g-murali-krishnan-74b0a0366';
       this.appendLine(`Opening LinkedIn profile: <a href="${url}" target="_blank" rel="noopener noreferrer" class="term-cyan term-underline">${url}</a>`);
       window.open(url, '_blank');
     }

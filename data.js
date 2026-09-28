@@ -23,7 +23,7 @@ const PORTFOLIO_DATA = {
     phone: "+91 7259916747",
     links: {
       github: "https://github.com/Krish-legend13",
-      linkedin: "https://www.linkedin.com/in/g-murali-krishnan-74b0a0366/",
+      linkedin: "https://www.linkedin.com/in/g-murali-krishnan-74b0a0366",
       tryhackme: "https://tryhackme.com/p/HunterHacker05?tab=yearly-activity",
       resumePdf: "G Murali Krishnan - 1ST23CY012.pdf"
     }
